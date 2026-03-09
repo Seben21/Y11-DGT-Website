@@ -1,0 +1,35 @@
+body {
+    margin: auto;
+    background-color: #f9e0df;
+}
+/* ------ Set Up the site grid ------ */
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "logo banner logo"
+        /*"nav nav nav"*/
+        
+}
+
+.logo {
+    
+}
+
+.banner {
+    background-color: #C2DAFE
+}
+
+.nav {
+    background-color: #EBEBEB
+}
+
+.main {
+    background-color: #FFBEBE
+}
+
+.footer {
+    background-color: #ffa6a6
+}
+
