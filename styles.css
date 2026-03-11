@@ -1,35 +1,79 @@
 body {
+    background-color: #FFBEBE;
     margin: auto;
-    background-color: #f9e0df;
 }
+
+.caveat-brush-regular {
+  font-family: "Caveat Brush", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* ------ Set Up the site grid ------ */
 .wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 4fr 1fr 2fr;
     grid-template-rows: auto;
     grid-template-areas: 
-        "logo banner logo"
-        /*"nav nav nav"*/
-        
+        "left-space left-logo banner right-logo right-space"
+        "nav nav nav nav nav"
+        "main main main main main"
+        "footer footer footer footer footer";
+}
+.left-space {
+    grid-area: left-space;
 }
 
-.logo {
-    
+.right-space {
+    grid-area: right-space;
+}
+
+.left-logo {
+    align-content: center; 
+    grid-area: left-logo;
+}
+
+.right-logo { 
+    align-content: center;
+    grid-area: right-logo;
 }
 
 .banner {
-    background-color: #C2DAFE
+    text-align: center;
+    grid-area: banner;
 }
 
 .nav {
+    grid-area: nav;
+    padding: 1%;
     background-color: #EBEBEB
 }
 
+.nav a {
+    color: #f18383;
+    text-align: center;
+    float: left;
+    text-decoration: none;
+    display: block;
+    padding: 1px 10px;
+}
+
+.nav a:hover {
+    color:#ffffff;
+    background-color: #ffa6a6;
+}
+
 .main {
+    grid-area: main;
+    padding: 1%;
     background-color: #FFBEBE
 }
 
 .footer {
+    grid-area: footer;
     background-color: #ffa6a6
 }
 
+.left-space, .left-logo, .banner, .right-logo, .right-space {
+    background-color: #c2dafe;
+}
