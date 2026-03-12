@@ -12,13 +12,14 @@ body {
 /* ------ Set Up the site grid ------ */
 .wrapper {
     display: grid;
-    grid-template-columns: 2fr 1fr 4fr 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr 2fr 2fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-        "left-space left-logo banner right-logo right-space"
-        "nav nav nav nav nav"
-        "main main main main main"
-        "footer footer footer footer footer";
+        "left-space left-space left-logo banner banner right-logo right-space right-space"
+        "nav nav nav nav nav nav nav nav"
+        "main-left slogan slogan slogan slogan slogan slogan main-right"
+        "main-left menu menu menu menu menu-imgs menu-imgs main-right"
+        "footer footer footer footer footer footer footer footer";
 }
 
 .left-space {
@@ -40,7 +41,7 @@ body {
 }
 
 .banner {
-    font-size: clamp(1rem, 4vw, 2.1rem);
+    font-size: clamp(1rem, 4vw, 3rem);
     text-align: center;
     grid-area: banner;
 }
@@ -52,12 +53,12 @@ body {
 
 .nav a {
     color: #f18383;
-    font-size: clamp(1rem, 4vw, 1.3rem);
+    font-size: clamp(1rem, 4vw, 1.5rem);
     text-align: center;
     float: left;
     text-decoration: none;
     display: block;
-    padding: 0.8% 10.765%;
+    padding: 0.8% 10.496%;
 }
 
 .nav a:hover {
@@ -66,15 +67,68 @@ body {
     border-radius: 40px;
 }
 
-.main {
-    grid-area: main;
+.slogan {
+    grid-area: slogan;
+    padding-top: 2%;
+    text-align: center;
+    font-size: clamp(1rem, 3vw, 1.8rem);
+    background-color: #ffd9d8;
+}
+
+.menu-imgs {
+    grid-area: menu-imgs;
+    padding: 10%;
+    text-align: center;
+    background-color: #ffd9d8;
+}
+
+.menu-imgs-content {
+    align-content: center;
+    margin: 20%;
     padding: 1%;
-    background-color: #ffd3d3
+    display: block;
+    background-color: #ffb4b0;
+    border-radius: 15px;
+}
+
+.main-left {
+    grid-area: main-left;
+    background-color: #ffd9d8;
+}
+.main-right {
+    grid-area: main-right;
+    background-color: #ffd9d8;
+}
+
+.menu {
+    grid-area: menu;
+    padding: 10%;
+    text-align: center;
+    background-color: #ffd9d8;
+}
+
+.menu-content {
+    margin: -6%;
+    padding: 1%;
+    display: block;
+    background-color: #ffb4b0;
+    border-radius: 15px;
+}
+
+.subheading {
+    font-size: clamp(1rem, 8vw, 3rem);
+    display: block;
+    background-color: #f1948f;
+    border-radius: 30px
+}
+
+.flavor-title {
+    font-size: clamp(1rem, 2vw, 1.8rem)
 }
 
 .footer {
     grid-area: footer;
-    background-color: #ffa6a6
+    background-color: #f1948f;
 }
 
 .left-space, .left-logo, .banner, .right-logo, .right-space {
