@@ -19,6 +19,7 @@ body {
         "nav nav nav nav nav nav nav nav"
         "main-left slogan slogan slogan slogan slogan slogan main-right"
         "main-left menu menu menu menu menu-imgs menu-imgs main-right"
+        "main-left menu menu menu menu menu-imgs menu-imgs main-right"
         "footer footer footer footer footer footer footer footer";
 }
 
@@ -81,7 +82,8 @@ body {
 
 .menu-imgs {
     grid-area: menu-imgs;
-    padding: 10%;
+    margin-top: 25%;
+    padding: 5%;
     text-align: center;
     background-color: #ffd9d8;
 }
@@ -90,6 +92,7 @@ body {
     align-content: center;
     margin: 20%;
     padding: 1%;
+    padding-right: 3%;
     display: block;
     background-color: #ffb4b0;
     border-radius: 15px;
