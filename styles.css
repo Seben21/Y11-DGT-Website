@@ -9,8 +9,8 @@ body {
   font-style: normal;
 }
 
-/* ------ Set Up the site grid ------ */
-.wrapper {
+/* -------- The Index/home page layout -------- */
+.wrapper-index {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 2fr 2fr 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -18,11 +18,15 @@ body {
         "left-space left-space left-logo banner banner right-logo right-space right-space"
         "nav nav nav nav nav nav nav nav"
         "main-left slogan slogan slogan slogan slogan slogan main-right"
-        "main-left menu menu menu menu menu-imgs menu-imgs main-right"
-        "main-left menu menu menu menu menu-imgs menu-imgs main-right"
+        "main-left menu menu menu menu menu-space menu-space main-right"
+        "main-left oreo-menu oreo-menu oreo-menu oreo-menu oreo oreo main-right"
+        "main-left mango-menu mango-menu mango-menu mango-menu mango mango main-right"
+        "main-left strawberry-menu strawberry-menu strawberry-menu strawberry-menu strawberry strawberry main-right"
+        "main-left matcha-menu matcha-menu matcha-menu matcha-menu matcha matcha main-right"
         "footer footer footer footer footer footer footer footer";
 }
 
+/*This is all to style the main banner - Includes the spacing, logos, and main text*/
 .left-space {
     grid-area: left-space;
 }
@@ -47,6 +51,12 @@ body {
     grid-area: banner;
 }
 
+.left-space, .left-logo, .banner, .right-logo, .right-space {
+    background-color: #c2dafe;
+}
+
+
+/*The styling of the Navigation bar*/
 .nav {
     grid-area: nav;
     background-color: #bcb5b5;
@@ -72,6 +82,8 @@ body {
     border-radius: 40px;
 }
 
+
+/*The slogan*/
 .slogan {
     grid-area: slogan;
     padding-top: 2%;
@@ -80,19 +92,78 @@ body {
     background-color: #ffd9d8;
 }
 
-.menu-imgs {
-    grid-area: menu-imgs;
-    margin-top: 25%;
-    padding: 5%;
+
+/*The main part of the home screen - the menu - This includes the styling of the text and of the imgs*/
+.oreo-menu {
+    margin-top: -2%;
+    grid-area: oreo-menu;
     text-align: center;
-    background-color: #ffd9d8;
+    padding: 8%;
+    display: block;
+    background-color: #ffb4b0;
+    border-radius: 20px;
 }
 
-.menu-imgs-content {
+.menu-imgs-content-oreo {
+    grid-area: oreo;
+    margin: 10%;
     align-content: center;
-    margin: 20%;
-    padding: 1%;
-    padding-right: 3%;
+    padding-left: 13%;
+    display: block;
+    background-color: #ffb4b0;
+    border-radius: 15px;
+}
+
+.mango-menu {
+    margin-top: -2%;
+    grid-area: mango-menu;
+    text-align: center;
+    padding: 8%;
+    display: block;
+    background-color: #ffb4b0;
+}
+
+.menu-imgs-content-mango {
+    grid-area: mango;
+    margin: 10%;
+    align-content: center;
+    padding-left: 13%;
+    display: block;
+    background-color: #ffb4b0;
+    border-radius: 15px;
+}
+
+.strawberry-menu {
+    grid-area: strawberry-menu;
+    text-align: center;
+    padding: 8%;
+    display: block;
+    background-color: #ffb4b0;
+}
+
+.menu-imgs-content-strawberry {
+    grid-area: strawberry;
+    margin: 10%;
+    align-content: center;
+    padding-left: 13%;
+    display: block;
+    background-color: #ffb4b0;
+    border-radius: 15px;
+}
+
+.matcha-menu {
+    grid-area: matcha-menu;
+    text-align: center;
+    padding: 8%;
+    display: block;
+    background-color: #ffb4b0;
+}
+
+.menu-imgs-content-matcha {
+    grid-area: matcha;
+    margin: 10%;
+    align-content: center;
+    padding-left: 13%;
     display: block;
     background-color: #ffb4b0;
     border-radius: 15px;
@@ -112,16 +183,19 @@ body {
     padding: 10%;
     text-align: center;
     background-color: #ffd9d8;
+    margin-bottom: -5.5%;
 }
 
 .menu-content {
-    margin: -6%;
+    margin: -10%;
     padding: 1%;
     display: block;
     background-color: #ffb4b0;
     border-radius: 15px;
 }
 
+
+/*Makes the subheadings slightly bigger and gives it a rounded edge*/
 .subheading {
     font-size: clamp(1rem, 8vw, 3rem);
     display: block;
@@ -129,16 +203,123 @@ body {
     border-radius: 30px
 }
 
+
+/*Makes the flavor names slightly bigger*/
 .flavor-title {
-    font-size: clamp(1rem, 2vw, 1.8rem)
+    font-size: clamp(1rem, 2.2vw, 2rem)
 }
 
-.footer {
+
+
+/* -------- The About Us page layout -------- */
+.wrapper-about {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr 2fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "left-space left-space left-logo banner banner right-logo right-space right-space"
+        "nav nav nav nav nav nav nav nav"
+        "main-left about-us about-us about-us about-us about-us about-us main-right"
+        "main-left people-box-left people-box-left people-box-left people-box-right people-box-right people-box-right main-right"
+        "footer footer footer footer footer footer footer footer";
+}
+
+
+/*Main subheading for the about page*/
+.about-us {
+    grid-area: about-us;
+    font-size: clamp(1rem, 2.5vw, 1.8rem);
     text-align: center;
-    grid-area: footer;
-    background-color: #f1948f;
 }
 
-.left-space, .left-logo, .banner, .right-logo, .right-space {
-    background-color: #c2dafe;
+
+/*Styling for the people on the left side of the page*/
+.people-box-left {
+    grid-area: people-box-left;
+    padding: 10%;
+    text-align: center;
+    background-color: #ffd9d8;
+    font-size: clamp(1rem, 2vw, 1.8rem);
+}
+.people-imgs-top-left {
+    margin: -6%;
+    padding: 4%;
+    padding-top: 6.5%;
+    display: block;
+    background-color: #ffb4b0;
+    border-radius: 30px;
+}
+.people-imgs-bottom-left {
+    margin: -6%;
+    padding: 4%;
+    padding-top: 6.5%;
+    display: block;
+    background-color: #ffb4b0;
+    border-radius: 30px;
+}
+
+/*Styling for the people on the right side of the page*/
+.people-box-right {
+    grid-area: people-box-right;
+    padding: 10%;
+    text-align: center;
+    background-color: #ffd9d8;
+    font-size: clamp(1rem, 2vw, 1.8rem);
+}
+.people-imgs-top-right {
+    margin: -6%;
+    padding: 4%;
+    padding-top: 6.5%;
+    display: block;
+    background-color: #ffb4b0;
+    border-radius: 30px;
+}
+.people-imgs-bottom-right {
+    margin: -6%;
+    padding: 4%;
+    padding-top: 6.5%;
+    display: block;
+    background-color: #ffb4b0;
+    border-radius: 30px;
+}
+
+
+
+/* -------- The Contact page layout -------- */
+.wrapper-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr 2fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "left-space left-space left-logo banner banner right-logo right-space right-space"
+        "nav nav nav nav nav nav nav nav"
+        "main-left about-us about-us about-us about-us about-us about-us main-right"
+        "main-left people-box-left people-box-left people-box-left people-box-right people-box-right people-box-right main-right"
+        "footer footer footer footer footer footer footer footer";
+}
+
+
+
+/* -------- The Feedback page layout -------- */
+.wrapper-feedback {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr 2fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "left-space left-space left-logo banner banner right-logo right-space right-space"
+        "nav nav nav nav nav nav nav nav"
+        "main-left about-us about-us about-us about-us about-us about-us main-right"
+        "main-left people-box-left people-box-left people-box-left people-box-right people-box-right people-box-right main-right"
+        "footer footer footer footer footer footer footer footer";
+}
+
+
+
+/* ------ The footer of all the pages - includes the styling for the copyright message ------ */
+.footer {
+    font-size: clamp(1rem, 1.2vw, 2rem);
+    text-align: right;
+    grid-area: footer;
+    padding-right: 3%;
+    background-color: #f1948f;
 }
