@@ -9,6 +9,7 @@ body {
   font-style: normal;
 }
 
+
 /* -------- The Index/home page layout -------- */
 .wrapper-index {
     display: grid;
@@ -115,14 +116,16 @@ body {
 
 /*The main part of the home screen - the menu - This includes the styling of the text and of the imgs*/
 .oreo-menu {
-    margin-top: -2%;
-    margin-bottom: -10%;
     grid-area: oreo-menu;
     text-align: center;
     padding: 8%;
     display: block;
     background-color: #ffb4b0;
-    border-radius: 20px;
+    border-radius: 10px;
+    font-size: clamp(0.7rem, 1.2vw, 2rem);
+    font-family: "Comic Relief", system-ui;
+    font-style: normal;
+    margin-bottom: -2%;
 }
 
 .menu-imgs-content-oreo {
@@ -136,13 +139,15 @@ body {
 }
 
 .mango-menu {
-    margin-top: -2%;
     grid-area: mango-menu;
     text-align: center;
     padding: 8%;
     display: block;
     background-color: #ffb4b0;
-    margin-bottom: -10%;
+    font-size: clamp(0.7rem, 1.2vw, 2rem);
+    font-family: "Comic Relief", system-ui;
+    font-style: normal;
+    margin-bottom: -2%;
 }
 
 .menu-imgs-content-mango {
@@ -161,6 +166,10 @@ body {
     padding: 8%;
     display: block;
     background-color: #ffb4b0;
+    font-size: clamp(0.7rem, 1.2vw, 2rem);
+    font-family: "Comic Relief", system-ui;
+    font-style: normal;
+    margin-bottom: -2%;
 }
 
 .menu-imgs-content-strawberry {
@@ -179,6 +188,10 @@ body {
     padding: 8%;
     display: block;
     background-color: #ffb4b0;
+    font-size: clamp(0.7rem, 1.2vw, 2rem);
+    font-family: "Comic Relief", system-ui;
+    font-style: normal;
+    margin-bottom: -2%;
 }
 
 .menu-imgs-content-matcha {
@@ -259,7 +272,9 @@ body {
 .description {
     grid-area: description;
     text-align: center;
-    font-size: clamp(1rem, 1.4vw, 2.3rem);
+    font-size: clamp(0.7rem, 1.3vw, 2rem);
+    font-family: "Comic Relief", system-ui;
+    font-style: normal;
 }
 
 .meet-team {
@@ -385,6 +400,7 @@ body {
     text-decoration: none;
     margin: 2%;
 }
+/* The styling for the link that takes you to their instagram page */
 .contact-box-right a {
     color: #dd817d;
     text-align: center;
@@ -392,6 +408,7 @@ body {
     font-size: clamp(1rem, 2.3vw, 3rem);
 }
 
+/* The lower box on the contact page - styling for the text */
 .contact-box-lower {
     grid-area: contact-box-lower;
     padding: 4%;
@@ -414,12 +431,17 @@ body {
     grid-template-areas: 
         "left-space left-space left-logo banner banner right-logo right-space right-space"
         "nav nav nav nav nav nav nav nav"
-        "main-left about-us about-us about-us about-us about-us about-us main-right"
-        "main-left people-box-left people-box-left people-box-left people-box-right people-box-right people-box-right main-right"
+        "feedback-main feedback-main feedback-main feedback-main feedback-main feedback-main feedback-main feedback-main"
         "footer footer footer footer footer footer footer footer";
 }
 
-
+.feedback-main {
+    background-color: #ffb4b0; 
+    grid-area: feedback-main;
+    justify-content: center;
+    text-align: center;
+    font-size: clamp(1rem, 3vw, 4rem)
+}
 
 /* ------ The footer of all the pages - includes the styling for the copyright message ------ */
 .footer {
